@@ -1,0 +1,106 @@
+<%- include("partials/head") %>
+<body class="body" id="contact">
+	<%- include("partials/nav") %>
+	<main class="main-wrapper contact-wrapper">
+		<!-- Form not implemented on the backend yet -->
+		<h1>Request A Free Quote</h1>
+		<section class="quote-form">
+			<form action="/send" method="post" class="form">
+				<section class="contact-section">
+					<label for="personName" class="required">Name: </label>
+					<input
+						type="text"
+						name="personName"
+						placeholder="Name"
+						id="personName"
+						class="personName"
+						required
+					/>
+				</section>
+				<section class="contact-section">
+					<label for="address" class="required">Request Address: </label>
+					<input
+						type="text"
+						name="address"
+						placeholder="Address"
+						id="address"
+						class="address"
+						required
+					/>
+				</section>
+				<section class="contact-section">
+					<label for="phone" class="required">Phone Number: </label>
+					<input
+						type="tel"
+						name="phone"
+						id="phone"
+						placeholder="+1 (___) ___-____"
+						minlength="0"
+						maxlength="50"
+						required
+						class="phone-input"
+					/>
+				</section>
+				<section class="contact-section">
+					<label for="email" class="required">Email: </label>
+					<input
+						type="email"
+						name="email"
+						id="email"
+						placeholder="Someone@example.com"
+						minlength="0"
+						maxlength="50"
+						required
+						class="email-input"
+					/>
+				</section>
+				<section class="description-area">
+					<label for="description" class="required"
+						>Description of work:
+					</label>
+					<textarea
+						name="description"
+						id="description"
+						cols="50"
+						rows="10"
+						placeholder="Please Briefly Describe Work Needing Done"
+						required
+						class="description"
+					></textarea>
+				</section>
+				<div class="contact-form-buttons">
+					<button type="submit" class="btn btn-success submit-btn">
+						Submit
+					</button>
+					<button type="reset" class="btn btn-danger">Cancel</button>
+				</div>
+			</form>
+		</section>
+		<section class="phone-section">
+			<hr />
+			<h2 class="OR-text">OR</h2>
+			<hr />
+			<div class="quote-form">
+				<h4>You can call us at:</h4>
+				<h2>(304) - 231 - 4084</h2>
+			</div>
+		</section>
+		<section class="location">
+			<h3>You can also come see us at our office location</h3>
+			<h5>Office Hours:</h5>
+			<ul>
+				<li>Monday-Friday <strong>8am-5pm</strong></li>
+				<li>Saturday-Sunday <strong>Closed</strong></li>
+			</ul>
+			<iframe
+				src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3060.0801560591685!2d-80.74969968440575!3d39.917222379426406!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8835e0eb145a792d%3A0xd8a17ed236f7e8f2!2s819%20Lafayette%20Ave%2C%20Moundsville%2C%20WV%2026041!5e0!3m2!1sen!2sus!4v1644971684818!5m2!1sen!2sus"
+				width="600"
+				height="450"
+				style="border: 0"
+				allowfullscreen=""
+				loading="lazy"
+			></iframe>
+		</section>
+	</main>
+</body>
+<%- include("partials/footer") %>

@@ -1,0 +1,19 @@
+Home Page
+	Mobile formatting
+
+Our Work Page
+	Get with sky for photos and descriptions of projects
+	Mobile formatting
+
+About Page
+	Mobile Formatting
+
+Contact Page
+	Mobile Formatting
+
+Full Site
+	Get with sky and make sure that everything looks good before deployment.
+	Footer needs mobile formatting added.
+
+Optional: 
+	Add reviews section

@@ -1,0 +1,21 @@
+<%- include("partials/head") %>
+<body>
+	<%- include("partials/nav") %>
+	<main class="main-wrapper">
+		<h2>
+			We have received your request and someone will get in contact with you
+			shortly
+		</h2>
+		<h4>Name:</h4>
+		<p><%= vars.personName %></p>
+		<h4>Request Address:</h4>
+		<p><%= vars.address %></p>
+		<h4>Phone:</h4>
+		<p><%= vars.phone %></p>
+		<h4>Email:</h4>
+		<p><%= vars.email %></p>
+		<h4>Description of Request:</h4>
+		<p><%= vars.description %></p>
+	</main>
+	<%- include("partials/footer") %>
+</body>

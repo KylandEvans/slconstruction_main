@@ -1,0 +1,420 @@
+html {
+	overflow-x: hidden;
+}
+
+.main-wrapper {
+	min-height: 70vh;
+}
+
+.home-main {
+	background-image: url("../Images/new_kitchen.jpg");
+	height: 100vh;
+	width: 100vw;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+}
+
+.logo {
+	height: 30px;
+	width: 30px;
+	margin-left: 30px;
+}
+
+.sticky-top {
+	z-index: 1;
+}
+
+.nav-container {
+	justify-content: flex-end;
+}
+
+.nav-link:hover {
+	background-color: #66666677;
+	color: #cfcfcf;
+	border-radius: 12px;
+}
+
+.nav-text {
+	color: #cfcfcf;
+}
+
+.home-wrapper {
+	height: 65vh;
+	width: 100vw;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: rgb(235, 235, 235);
+}
+
+.home-image {
+	width: 90vw;
+	height: 60vh;
+	object-fit: cover;
+}
+
+.quotes-section {
+	display: flex;
+	width: 98%;
+	height: 250px;
+	justify-content: center;
+	align-items: center;
+	background-color: rgb(207, 236, 38);
+	border-radius: 24px;
+	margin: 10px 20px;
+}
+
+.money-section {
+	display: flex;
+	justify-content: space-between;
+}
+
+.dollar-sign-container {
+	width: 30%;
+	background-color: rgb(163, 226, 46);
+	display: flex;
+	justify-content: flex-end;
+	margin: 50px 50px 50px 0;
+	border-bottom-right-radius: 35px;
+	border-top-right-radius: 35px;
+}
+
+.dollar-sign-wrapper {
+	background-color: rgb(1, 134, 1);
+	height: 200px;
+	width: 200px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 50%;
+	padding: 20px 0 0 10px;
+	margin: 30px 30px;
+}
+
+.dollar-sign {
+	height: 175px;
+}
+
+.comment-wrapper {
+	background-color: rgba(180, 180, 180, 0.349);
+	margin: 0 50px 0 0;
+	border-radius: 24px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	border: solid rgb(35, 35, 35) 1px;
+	box-shadow: 10px 5px 5px rgb(55, 55, 55);
+}
+
+.money-quote {
+	width: 80%;
+	text-align: center;
+	margin: 5px 0 15px 0;
+}
+
+.customer-service-section {
+	height: 250px;
+	background-color: rgb(220, 220, 220);
+	margin: 70px 0;
+	display: flex;
+	justify-content: center;
+}
+
+.customer-service-wrapper {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+	width: 30%;
+}
+
+.hand-shake-image {
+	height: 150px;
+	width: 150px;
+}
+
+.quote-credit {
+	font-style: italic;
+	display: flex;
+	justify-content: flex-end;
+	width: 100%;
+}
+
+.project-page {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.project-wrapper {
+	width: 90%;
+	background-color: rgb(201, 201, 201);
+	margin: 15px 0;
+	border-radius: 15px;
+	display: flex;
+	justify-content: space-between;
+	min-height: 150px;
+	align-items: center;
+}
+
+.project-image {
+	max-height: 300px;
+	max-width: 500px;
+	object-fit: contain;
+	padding: 30px 50px;
+}
+
+.project-image:hover {
+	cursor: pointer;
+	transform: scale(1.05);
+}
+
+.project-description {
+	max-width: 70%;
+	padding-right: 50px;
+}
+
+.about-image-wrapper,
+.about-text-wrapper {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.about-image,
+.about-text {
+	height: 30vh;
+	width: 90vw;
+	object-fit: cover;
+}
+
+.about-text {
+	margin-top: 50px;
+	font-size: 24px;
+	overflow-wrap: break-word;
+	height: auto;
+}
+
+.about-services-section {
+	display: flex;
+	width: 100vw;
+	justify-content: space-around;
+	margin: 50px 0 0 0;
+}
+
+.about-residential-services,
+.about-commercial-services {
+	background-color: rgba(190, 190, 190, 0.7);
+	padding: 50px;
+	border-radius: 15px;
+}
+
+.about-residential-services h2,
+.about-commercial-services h2 {
+	font-size: 42px;
+}
+
+.about-residential-services ul,
+.about-commercial-services ul {
+	font-size: 24px;
+}
+
+.contact-wrapper {
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+}
+
+.quote-form {
+	margin-top: 50px;
+	background-color: rgba(200, 200, 200, 0.452);
+	padding: 50px;
+	border-radius: 15px;
+}
+
+.contact-section {
+	display: flex;
+	justify-content: space-between;
+	margin: 10px 0;
+}
+
+.contact-section input {
+	width: 65%;
+}
+
+.description-area {
+	display: flex;
+	flex-direction: column;
+	margin-bottom: 20px;
+}
+
+.contact-form-buttons {
+	display: flex;
+	justify-content: center;
+}
+
+.contact-form-buttons button {
+	margin: 10px;
+}
+
+.phone-section {
+	margin: 50px 0;
+}
+
+.OR-text {
+	text-align: center;
+}
+
+.required::before {
+	content: "*";
+	color: red;
+	position: relative;
+}
+
+/* Add this to the image when it is clicked on. Also add the .noscroll class to the body. */
+.image-view {
+	height: 100vh;
+	width: 100vw;
+	position: absolute;
+	object-fit: contain;
+	left: 0;
+	z-index: 2;
+	background-color: rgba(0, 0, 0, 0.5);
+}
+
+.close-wrapper {
+	position: absolute;
+	right: 5px;
+	height: 50px;
+	width: 50px;
+	background-color: transparent;
+	z-index: 3;
+	display: none;
+	align-items: center;
+	justify-content: center;
+}
+
+.close {
+	position: relative;
+	height: 40px;
+	width: 40px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.close::before,
+.close::after {
+	position: absolute;
+	content: "";
+	width: 100%;
+	height: 4px;
+	background-color: rgb(219, 219, 219);
+	border-radius: 15px;
+}
+
+.close::before {
+	transform: rotate(45deg);
+}
+
+.close::after {
+	transform: rotate(-45deg);
+}
+
+.close-wrapper:hover {
+	cursor: pointer;
+	transform: scale(1.2);
+}
+
+.footer {
+	height: auto;
+	margin-top: 30px;
+	height: 200px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.ftr-col {
+	width: 20%;
+}
+
+.ftr-col a,
+.ftr-col a:visited,
+.ftr-col a:active {
+	color: rgb(224, 224, 224);
+}
+
+.ftr-logo {
+	height: 60px;
+	width: 60px;
+	margin-left: 70px;
+}
+
+/* Add this to the body when you dont want to scroll */
+.noscroll {
+	overflow-y: hidden;
+}
+
+/* Start Responsive Code */
+
+@media (max-width: 1000px) {
+	.quotes-section {
+		width: 100%;
+		margin: 0;
+	}
+	.money-section {
+		flex-direction: column;
+		align-items: center;
+	}
+	.dollar-sign-container {
+		width: 70%;
+		align-self: flex-start;
+	}
+	.comment-wrapper {
+		height: 300px;
+		width: 75%;
+	}
+	.customer-service-section {
+		height: auto;
+	}
+	.about-services-section {
+		flex-direction: column;
+		height: auto;
+		justify-content: space-between;
+	}
+	.about-text {
+		font-size: 18px;
+		text-align: center;
+	}
+	.about-residential-services {
+		margin: 50px;
+	}
+	.about-commercial-services {
+		margin: 50px;
+	}
+	.logo {
+		height: auto;
+	}
+	.footer {
+		width: 100%;
+		height: auto;
+		flex-direction: column;
+	}
+	.ftr-col {
+		margin: 50px;
+		align-items: center;
+		justify-content: center;
+		text-align: center;
+	}
+}
+
+@media (max-width: 800px) {
+	.project-wrapper {
+		flex-direction: column;
+	}
+}
