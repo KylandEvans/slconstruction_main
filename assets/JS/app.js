@@ -28,37 +28,13 @@ const app = {
 				app.loadSomethingElse();
 		}
 	},
-	loadHome: () => {},
-	loadProjects: () => {
-		const projectImage = document.querySelectorAll(".project-image");
-		const close = document.querySelector(".close-wrapper");
-		const body = document.querySelector(".body");
-		const html = document.querySelector("html");
-
-		projectImage.forEach(image => {
-			image.addEventListener("click", () => {
-				image.classList.add("image-view");
-				image.classList.remove("project-image");
-				body.classList.add("noscroll");
-				html.classList.add("noscroll");
-				image.style.top = window.scrollY + "px";
-				close.style.display = "flex";
-				close.style.top = window.scrollY + 5 + "px";
-			});
-		});
-
-		close.addEventListener("click", () => {
-			projectImage.forEach(image => {
-				if (image.classList.contains("image-view")) {
-					image.classList.remove("image-view");
-					image.classList.add("project-image");
-					body.classList.remove("noscroll");
-					html.classList.remove("noscroll");
-					close.style.display = "none";
-				}
-			});
-		});
+	loadHome: () => {
+		const html = document.getElementsByTagName("html");
+		const body = document.getElementsByTagName("body");
+		html[0].style.overflow = "hidden";
+		body[0].style.overflow = "hidden";
 	},
+	loadProjects: () => {},
 	loadAbout: () => {},
 	loadContact: () => {
 		// FIX: Working on validating form information.
@@ -169,3 +145,14 @@ const app = {
 	loadSomethingElse: () => {},
 };
 app.init();
+
+window.addEventListener("scroll", () => {
+	const navbar = document.querySelector(".navbar");
+	if (window.scrollY >= 45) {
+		navbar.classList.remove("bg-transparent");
+		navbar.classList.add("bg-light");
+	} else if (window.scrollY < 45) {
+		navbar.classList.add("bg-transparent");
+		navbar.classList.remove("bg-light");
+	}
+});

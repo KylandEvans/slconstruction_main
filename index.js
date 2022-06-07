@@ -70,7 +70,7 @@ app.post("/send", (req, res) => {
 		let transporter = nodemailer.createTransport({
 			host: "smtp-mail.outlook.com",
 			port: 587,
-			secure: false, // true for 465, false for other ports
+			secure: false,
 			auth: {
 				user: process.env.SMTP_AUTH_USER,
 				pass: process.env.SMTP_AUTH_PASS,
@@ -81,7 +81,7 @@ app.post("/send", (req, res) => {
 		let info = await transporter.sendMail(
 			{
 				from: "slconstruction.confermation@outlook.com",
-				to: "kylandevans@gmail.com",
+				to: "kylandevans@gmail.com", // This is where sky's email address will go!
 				subject: `New Quote Request From ${req.body.personName}`,
 				html: output,
 			},
@@ -147,5 +147,8 @@ app.post("/send", (req, res) => {
 	mainMailer().catch(e => console.error(e));
 });
 
-// http.createServer(app).listen(80);
+app.all("*", (req, res) => {
+	res.status(404).render("error");
+});
+
 app.listen(port, () => console.log(`Listening on port ${port}`));

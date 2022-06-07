@@ -6,13 +6,42 @@ html {
 	min-height: 70vh;
 }
 
-.home-main {
-	background-image: url("../Images/new_kitchen.jpg");
+.home-main-wrapper {
+	position: relative;
 	height: 100vh;
 	width: 100vw;
-	background-repeat: no-repeat;
+}
+
+.def-container {
+	max-width: 75vw;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+
+.home-main-wrapper::before {
+	content: "";
+	background-image: url("../Images/new_kitchen.jpg");
 	background-size: cover;
 	background-position: center;
+	background-repeat: no-repeat;
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	bottom: 0px;
+	left: 0px;
+	opacity: 0.6;
+}
+
+.home-main-center-elm {
+	display: flex;
+	height: 90%;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+	flex-direction: column;
+	text-align: center;
 }
 
 .logo {
@@ -54,94 +83,6 @@ html {
 	object-fit: cover;
 }
 
-.quotes-section {
-	display: flex;
-	width: 98%;
-	height: 250px;
-	justify-content: center;
-	align-items: center;
-	background-color: rgb(207, 236, 38);
-	border-radius: 24px;
-	margin: 10px 20px;
-}
-
-.money-section {
-	display: flex;
-	justify-content: space-between;
-}
-
-.dollar-sign-container {
-	width: 30%;
-	background-color: rgb(163, 226, 46);
-	display: flex;
-	justify-content: flex-end;
-	margin: 50px 50px 50px 0;
-	border-bottom-right-radius: 35px;
-	border-top-right-radius: 35px;
-}
-
-.dollar-sign-wrapper {
-	background-color: rgb(1, 134, 1);
-	height: 200px;
-	width: 200px;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	border-radius: 50%;
-	padding: 20px 0 0 10px;
-	margin: 30px 30px;
-}
-
-.dollar-sign {
-	height: 175px;
-}
-
-.comment-wrapper {
-	background-color: rgba(180, 180, 180, 0.349);
-	margin: 0 50px 0 0;
-	border-radius: 24px;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-	border: solid rgb(35, 35, 35) 1px;
-	box-shadow: 10px 5px 5px rgb(55, 55, 55);
-}
-
-.money-quote {
-	width: 80%;
-	text-align: center;
-	margin: 5px 0 15px 0;
-}
-
-.customer-service-section {
-	height: 250px;
-	background-color: rgb(220, 220, 220);
-	margin: 70px 0;
-	display: flex;
-	justify-content: center;
-}
-
-.customer-service-wrapper {
-	display: flex;
-	flex-direction: column;
-	justify-content: space-between;
-	align-items: center;
-	width: 30%;
-}
-
-.hand-shake-image {
-	height: 150px;
-	width: 150px;
-}
-
-.quote-credit {
-	font-style: italic;
-	display: flex;
-	justify-content: flex-end;
-	width: 100%;
-}
-
 .project-page {
 	width: 100%;
 	display: flex;
@@ -160,20 +101,24 @@ html {
 	align-items: center;
 }
 
-.project-image {
-	max-height: 300px;
-	max-width: 500px;
-	object-fit: contain;
-	padding: 30px 50px;
+.carousel {
+	width: 100%;
 }
 
-.project-image:hover {
-	cursor: pointer;
-	transform: scale(1.05);
+.project-image {
+	max-height: 300px;
+	max-width: 100%;
+	object-fit: contain;
+	margin: 15px 0;
+	padding: 0 50px;
+}
+
+.project-image-wrapper {
+	max-width: 70%;
 }
 
 .project-description {
-	max-width: 70%;
+	max-width: 30%;
 	padding-right: 50px;
 }
 
@@ -202,7 +147,7 @@ html {
 	display: flex;
 	width: 100vw;
 	justify-content: space-around;
-	margin: 50px 0 0 0;
+	margin: 50px 0 50px 0;
 }
 
 .about-residential-services,
@@ -222,6 +167,12 @@ html {
 	font-size: 24px;
 }
 
+.contact-page {
+	background-image: url("../Images/remodel_image.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
 .contact-wrapper {
 	display: flex;
 	align-items: center;
@@ -230,7 +181,7 @@ html {
 
 .quote-form {
 	margin-top: 50px;
-	background-color: rgba(200, 200, 200, 0.452);
+	background-color: rgba(200, 200, 200, 0.938);
 	padding: 50px;
 	border-radius: 15px;
 }
@@ -274,7 +225,6 @@ html {
 	position: relative;
 }
 
-/* Add this to the image when it is clicked on. Also add the .noscroll class to the body. */
 .image-view {
 	height: 100vh;
 	width: 100vw;
@@ -332,7 +282,7 @@ html {
 
 .footer {
 	height: auto;
-	margin-top: 30px;
+	/* margin-top: 30px; */
 	height: 200px;
 	display: flex;
 	justify-content: center;
@@ -360,24 +310,42 @@ html {
 	overflow-y: hidden;
 }
 
+.error-container {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+}
+
+.error-body {
+	height: 100vh;
+	background-image: linear-gradient(
+		to right,
+		rgba(250, 45, 45, 0.877),
+		rgba(238, 93, 93, 0.788),
+		rgba(250, 45, 45, 0.877)
+	);
+}
+
+.error-img-container {
+	height: 500px;
+	width: 500px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.error-img {
+	height: 25%;
+	width: 25%;
+}
+
 /* Start Responsive Code */
 
 @media (max-width: 1000px) {
 	.quotes-section {
 		width: 100%;
 		margin: 0;
-	}
-	.money-section {
-		flex-direction: column;
-		align-items: center;
-	}
-	.dollar-sign-container {
-		width: 70%;
-		align-self: flex-start;
-	}
-	.comment-wrapper {
-		height: 300px;
-		width: 75%;
 	}
 	.customer-service-section {
 		height: auto;
@@ -413,8 +381,21 @@ html {
 	}
 }
 
-@media (max-width: 800px) {
+@media (max-width: 950px) {
 	.project-wrapper {
 		flex-direction: column;
+	}
+	.project-description {
+		max-width: 90%;
+	}
+}
+
+@media (max-width: 550px) {
+	.about-residential-services,
+	.about-commercial-services {
+		margin-right: 0;
+		margin-left: 0;
+		padding: 0;
+		border-radius: 0;
 	}
 }

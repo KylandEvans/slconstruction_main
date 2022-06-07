@@ -1,7 +1,14 @@
 <%- include("partials/head") %>
 
-<body>
+<body id="home">
 	<main class="home-main-wrapper">
-		<div class="home-main"> <%- include("partials/nav") %> </div>
+		<%- include("partials/nav") %>
+		<div class="home-main-center-elm">
+			<h1 class="fw-bolder">Making dreams a reality!</h1>
+			<div>
+				<a class="btn btn-primary" href="/contact">Get a free Quote!</a>
+				<a class="btn btn-secondary" href="/about">View our Services</a>
+			</div>
+		</div>
 	</main>
 </body>
