@@ -20,7 +20,7 @@ app.set("views", path.join(__dirname, "views"));
 
 const scripts = ["https://cdn.jsdelivr.net"];
 
-const styles = [];
+const styles = ["https://cdn.jsdelivr.net"];
 
 const defaultSrc = ["https://www.google.com/"];
 
@@ -29,7 +29,7 @@ app.use(
 		directives: {
 			"script-src": ["'self'", ...scripts],
 			"frame-src": ["'self'", ...defaultSrc],
-			"style-src": ["'self'", "unsafe-inline", ...styles],
+			"style-src": ["'self'", "'unsafe-inline'", ...styles],
 		},
 	})
 );
