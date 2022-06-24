@@ -9,12 +9,35 @@ const path = require("path");
 const bodyParser = require("body-parser");
 const nodemailer = require("nodemailer");
 const validation = require("./assets/JS/validation");
+const helmet = require("helmet");
 
 app.use(express.static("assets"));
+app.use(helmet());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json({ extended: true }));
 app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "views"));
+
+const scripts = ["https://cdn.jsdelivr.net"];
+
+const styles = [];
+
+const defaultSrc = ["https://www.google.com/"];
+
+app.use(
+	helmet.contentSecurityPolicy({
+		directives: {
+			"script-src": ["'self'", ...scripts],
+			"frame-src": ["'self'", ...defaultSrc],
+			"style-src": ["'self'", "unsafe-inline", ...styles],
+		},
+	})
+);
+
+app.use((req, res, next) => {
+	res.header("Cross-Origin-Embedder-Policy", "cross-origin");
+	next();
+});
 
 app.get("/", (req, res) => {
 	res.render("home");
