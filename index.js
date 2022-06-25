@@ -36,6 +36,7 @@ app.use(
 
 app.use((req, res, next) => {
 	res.header("Cross-Origin-Embedder-Policy", "cross-origin");
+	res.header("Cross-Origin-Opener-Policy", "unsafe-none");
 	next();
 });
 
