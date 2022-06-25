@@ -104,7 +104,7 @@ app.post("/send", (req, res) => {
 		let info = await transporter.sendMail(
 			{
 				from: "slconstruction.confermation@outlook.com",
-				to: "jsky.lucas@gmail.com", // This is where sky's email address will go!
+				to: "jsky.lucas@gmail.com",
 				subject: `New Quote Request From ${req.body.personName}`,
 				html: output,
 			},
