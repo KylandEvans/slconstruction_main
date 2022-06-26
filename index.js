@@ -12,7 +12,7 @@ const validation = require("./assets/JS/validation");
 const helmet = require("helmet");
 
 app.use(express.static("assets"));
-// app.use(helmet());
+app.use(helmet());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json({ extended: true }));
 app.set("view engine", "ejs");
@@ -24,21 +24,21 @@ const styles = ["https://cdn.jsdelivr.net"];
 
 const defaultSrc = ["https://www.google.com/"];
 
-// app.use(
-// 	helmet.contentSecurityPolicy({
-// 		directives: {
-// 			"script-src": ["'self'", ...scripts],
-// 			"frame-src": ["'self'", ...defaultSrc],
-// 			"style-src": ["'self'", "'unsafe-inline'", ...styles],
-// 		},
-// 	})
-// );
+app.use(
+	helmet.contentSecurityPolicy({
+		directives: {
+			"script-src": ["'self'", ...scripts],
+			"frame-src": ["'self'", ...defaultSrc],
+			"style-src": ["'self'", "'unsafe-inline'", ...styles],
+		},
+	})
+);
 
-// app.use(
-// 	helmet({
-// 		originAgentCluster: false,
-// 	})
-// );
+app.use(
+	helmet({
+		originAgentCluster: false,
+	})
+);
 
 app.use((req, res, next) => {
 	res.header("Cross-Origin-Embedder-Policy", "cross-origin");
