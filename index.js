@@ -30,6 +30,7 @@ app.use(
 			"script-src": ["'self'", ...scripts],
 			"frame-src": ["'self'", ...defaultSrc],
 			"style-src": ["'self'", "'unsafe-inline'", ...styles],
+			"default-src": ["'self'", "'unsafe-inline'", ...defaultSrc],
 		},
 	})
 );
