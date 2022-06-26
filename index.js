@@ -31,6 +31,13 @@ app.use(
 			"frame-src": ["'self'", ...defaultSrc],
 			"style-src": ["'self'", "'unsafe-inline'", ...styles],
 			"default-src": ["'self'"],
+			imgSrc: [
+				"self",
+				"blob:",
+				"data:",
+				"https://res.cloudinary.com/dynljtael/",
+				"https://images.unsplash.com/",
+			],
 		},
 	})
 );
