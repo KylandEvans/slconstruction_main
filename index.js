@@ -37,6 +37,7 @@ app.use(
 				"data:",
 				"https://res.cloudinary.com/dynljtael/",
 				"https://images.unsplash.com/",
+				"http://www.slconstructionsllc.com",
 			],
 		},
 	})
