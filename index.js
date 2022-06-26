@@ -36,7 +36,7 @@ app.use(
 
 app.use(
 	helmet({
-		crossOriginIsolated: false,
+		originAgentCluster: false,
 	})
 );
 
