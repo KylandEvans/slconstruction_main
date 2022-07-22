@@ -398,4 +398,15 @@ html {
 		padding: 0;
 		border-radius: 0;
 	}
+	.contact-section {
+		flex-direction: column;
+	}
+	.quote-form {
+		margin: 0;
+		padding: 0;
+		display: block;
+	}
+	.description-area {
+		max-width: 95vw;
+	}
 }
